@@ -1,0 +1,9 @@
+
+// HomePage.jsx
+<div className="main-container">
+  <header>{/* Logo, search, icons */}</header>
+  <section className="snips">{/* Map snips users horizontally */}</section>
+  <nav className="categories">{/* Map category buttons, responsive wrap */}</nav>
+  <main className="recommended-videos">{/* Map video cards in a grid */}</main>
+  <footer>{/* Platform info */}</footer>
+</div>
