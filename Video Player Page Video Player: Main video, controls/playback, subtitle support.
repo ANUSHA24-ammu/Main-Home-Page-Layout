@@ -1,0 +1,31 @@
+import React, { useRef } from 'react';
+
+const VideoPlayer = ({ src, subtitleSrc }) => {
+  const videoRef = useRef(null);
+
+  return (
+    <div className="video-player-container">
+      <video 
+        ref={videoRef}
+        src={src}
+        controls
+        width="100%"
+        height="auto"
+        style={{ borderRadius: '12px', boxShadow: '0 1px 12px rgba(0,0,0,0.12)' }}
+      >
+        {subtitleSrc && (
+          <track 
+            label="English"
+            kind="subtitles"
+            srcLang="en"
+            src={subtitleSrc}
+            default
+          />
+        )}
+        {/* Add more <track> tags for multi-language subtitles */}
+      </video>
+    </div>
+  );
+};
+
+export default VideoPlayer;
