@@ -1,0 +1,27 @@
+// HeaderNavbar.jsx
+import React from 'react';
+import { FaBell, FaUserCircle, FaUpload, FaSearch } from "react-icons/fa";
+
+const HeaderNavbar = () => (
+  <header className="navbar">
+    <div className="logo">
+      <img src="/logo/bharatwatch-logo.svg" alt="Bharatwatch" />
+      <span className="brand">Bharat<span className="highlight">watch</span></span>
+    </div>
+    <div className="search-bar">
+      <FaSearch size={18} className="search-icon" />
+      <input
+        type="text"
+        placeholder="Search videos, creators…"
+        aria-label="Search"
+      />
+    </div>
+    <nav className="navbar-actions">
+      <button aria-label="Notifications"><FaBell size={22} /></button>
+      <button aria-label="Upload"><FaUpload size={22} /></button>
+      <button aria-label="Profile"><FaUserCircle size={24} /></button>
+    </nav>
+  </header>
+);
+
+export default HeaderNavbar;
